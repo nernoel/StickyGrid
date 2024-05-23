@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { createClient } from '@/utils/supabase/client';
 import { useRouter } from 'next/navigation';
-import Header from "@/components/Header";
+import Header from "@/components/page/Header";
 import StickyNote from "@/components/StickyNote";
 import { User } from '@supabase/supabase-js';
 
@@ -20,7 +20,7 @@ const ProtectedPage: React.FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [newNoteTitle, setNewNoteTitle] = useState<string>('');
   const [newNoteContent, setNewNoteContent] = useState<string>('');
-  const [newNoteColor, setNewNoteColor] = useState<number>(0); // Default color
+  const [newNoteColor, setNewNoteColor] = useState<number>(0);
   const router = useRouter();
   const supabase = createClient();
 
@@ -67,8 +67,8 @@ const ProtectedPage: React.FC = () => {
         setModalOpen(false);
         setNewNoteTitle('');
         setNewNoteContent('');
-        setNewNoteColor(0); // Reset color to default after adding note
-        fetchStickyNotes(user!.id); // Fetch updated list of sticky notes
+        setNewNoteColor(0);
+        fetchStickyNotes(user!.id);
       }
     } catch (error) {
       console.error('Unexpected error:', error);

@@ -1,7 +1,7 @@
 'use client'
 
-import StickyGridLogo from "./StickyGridLogo";
-import AuthButton from "./AuthButton";
+import StickyGridLogo from "../logo/StickyGridLogo";
+import AuthButton from "../buttons/AuthButton";
 
 export default function Header() {
   return (

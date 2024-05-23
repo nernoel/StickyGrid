@@ -4,7 +4,7 @@ import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import { SubmitButton } from "./submit-button";
 
-import StickyGridLogo from "@/components/StickyGridLogo";
+import StickyGridLogo from "@/components/logo/StickyGridLogo";
 
 export default function Login({
   searchParams,
@@ -27,7 +27,7 @@ export default function Login({
       return redirect("/login?message=Could not authenticate user");
     }
 
-    return redirect("/protected");
+    return redirect("/dashboard");
   };
 
   const signUp = async (formData: FormData) => {
@@ -77,49 +77,49 @@ export default function Login({
       </Link>
 
       <div className="bg-zinc-900 bg-200 p-6 rounded-lg flex justify-center items-center">
-      <form className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground">
-      <div className="mx-auto -mb-8 -mt-8"><StickyGridLogo /></div>
-        <label className="text-md" htmlFor="email">
-          Email
-        </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
-          name="email"
-          placeholder="email@example.com"
-          required
-        />
-        <label className="text-md" htmlFor="password">
-          Password
-        </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
-          type="password"
-          name="password"
-          placeholder="••••••••"
-          required
-        />
-        <SubmitButton
-          formAction={signIn}
-          className="bg-blue-600 hover:bg-blue-800 rounded-md px-4 py-2 text-foreground mb-2"
-          pendingText="Signing In..."
-        >
-          Sign In
-        </SubmitButton>
-        <SubmitButton
-          formAction={signUp}
-          className="hover:bg-gray-700 border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
-          pendingText="Signing Up..."
-        >
-          Sign Up
-        </SubmitButton>
-        {searchParams?.message && (
-          <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
-            {searchParams.message}
-          </p>
-        )}
-        
-      </form>
-      </div> 
+        <form className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground">
+          <div className="mx-auto -mb-8 -mt-8"><StickyGridLogo /></div>
+          <label className="text-md" htmlFor="email">
+            Email
+          </label>
+          <input
+            className="rounded-md px-4 py-2 bg-inherit border mb-6"
+            name="email"
+            placeholder="email@example.com"
+            required
+          />
+          <label className="text-md" htmlFor="password">
+            Password
+          </label>
+          <input
+            className="rounded-md px-4 py-2 bg-inherit border mb-6"
+            type="password"
+            name="password"
+            placeholder="••••••••"
+            required
+          />
+          <SubmitButton
+            formAction={signIn}
+            className="bg-blue-600 hover:bg-blue-800 rounded-md px-4 py-2 text-foreground mb-2"
+            pendingText="Signing In..."
+          >
+            Sign In
+          </SubmitButton>
+          <SubmitButton
+            formAction={signUp}
+            className="hover:bg-gray-700 border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
+            pendingText="Signing Up..."
+          >
+            Sign Up
+          </SubmitButton>
+          {searchParams?.message && (
+            <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
+              {searchParams.message}
+            </p>
+          )}
+
+        </form>
       </div>
+    </div>
   );
 }

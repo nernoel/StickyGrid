@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import Hero from "../components/Hero";
+import Header from "../components/page/Header";
+import Hero from "../components/page/Hero";
 
 import { createClient } from "@/utils/supabase/client";
 

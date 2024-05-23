@@ -101,7 +101,7 @@ const getColorName = (color: number) => {
         case 3:
             return 'red-500';
         default:
-            return 'gray-900';
+            return 'gray-500';
     }
 };
 

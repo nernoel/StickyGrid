@@ -55,3 +55,8 @@
 .fade-in {
   animation: fadeIn 2s ease-in-out;
 }
+
+.sticky-note {
+  width: 200px; 
+  height: 200px; 
+}
