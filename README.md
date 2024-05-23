@@ -11,6 +11,7 @@ The application is not 100% feature complete yet but currently content with the 
 Also will be working on fixing smaller details and tweaking how various things are implemented as compared to the current build for the application.
 
 ## 📺 Demo
-
-Feel free to view a working demo here 👉 https://sticky-grid.vercel.app
-
+The auth sign up is currently in fix right now so use the following sample login! 
+- Demo email: test@gmail.com
+- Demo password: 1234
+The Demo is located here: 👉 https://sticky-grid.vercel.app
