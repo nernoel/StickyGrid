@@ -71,7 +71,7 @@ const StickyNote: React.FC<StickyNoteProps> = ({ id, title, content, color, onUp
                 <p className="mt-2 text-gray-100">{content}</p>
             </div>
             {isEditing && (
-                <div className="fixed inset-0 z-50 overflow-auto bg-gray-500 bg-opacity-50 flex justify-center items-center">
+                <div className=" fixed inset-0 z-50 overflow-auto bg-gray-500 bg-opacity-50 flex justify-center items-center">
                     <div className="bg-gray-800 p-8 rounded-xl max-w-md">
                         <input type="text" value={editedTitle} onChange={(e) => setEditedTitle(e.target.value)} className="block w-full mb-4 border border-gray-300 rounded px-2 py-1" />
                         <textarea value={editedContent} onChange={(e) => setEditedContent(e.target.value)} className="block w-full mb-4 border border-gray-300 rounded px-2 py-1"></textarea>

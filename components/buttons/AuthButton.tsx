@@ -37,7 +37,7 @@ export default function AuthButton() {
     <div className="flex items-center gap-4">
       {user.email}
       <button
-        className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
+        className="flex rounded-md no-underline py-2 px-3 bg-gray-800 bg-btn-background hover:bg-gray-900"
         onClick={handleSignOut}
       >
         Logout
@@ -46,7 +46,7 @@ export default function AuthButton() {
   ) : (
     <Link
       href="/login"
-      className="py-2 px-3 flex rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
+      className="py-2 px-3 flex rounded-md no-underline bg-gray-800 bg-btn-background hover:bg-gray-900"
     >
       Login
     </Link>

@@ -7,6 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        fontFamily: {
+          'sans': ['Open Sans', 'ui-sans-serif', 'system-ui'],
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         btn: {

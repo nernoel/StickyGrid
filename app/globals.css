@@ -27,10 +27,6 @@
       background-color: hsl(var(--btn-background-hover));
     }
   }
-
-  * {
-    @apply border-foreground/20;
-  }
 }
 
 .animate-in {
