@@ -4,7 +4,7 @@ import HeroButton from '@/app/components/buttons/hero';
 
 export default function Hero() {
     return (
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-24">
         <div className="flex items-center">
           <div className="flex flex-col space-y-4">
 
@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
           <img src="/heroImage.gif" alt="note-gif" className="ml-8 w-1/2 h-auto"/>
         </div>
-        <hr className="border-t border-gray-800 w-full mb-4 mt-20" />
+        <hr className="border-t border-gray-800 w-full mb-4 mt-32" />
       </div>
     );
   }

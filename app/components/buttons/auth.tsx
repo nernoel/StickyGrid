@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { createClient } from "@/app/utils/supabase/client";
+import { createClient } from "@/app/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { User } from '@supabase/supabase-js';
 
@@ -26,7 +26,7 @@ export default function AuthButton() {
   const handleSignOut = async () => {
     try {
       await supabase.auth.signOut();
-      router.push("/login");
+      router.push("/pages/login");
     } catch (error) {
       console.error("Sign out error:", error);
     }
