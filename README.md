@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StickyGrid
+Sticky grid is a productivity application for storing digital sticky notes in an organized manner for ease of use. This application was build using ReactJS & Typescript for the front end and supabase for the backend.
+<br/>
+<img width="1777" height="1031" alt="Screenshot 2026-02-10 at 11 25 07 AM" src="https://github.com/user-attachments/assets/7a065ff4-a45a-4c1f-804a-6d89121d6e99" />
 
-## Getting Started
+<img width="1788" height="1024" alt="Screenshot 2026-02-10 at 11 40 13 AM" src="https://github.com/user-attachments/assets/d3441e6b-6f92-4997-b0b2-1e270fe0f83b" />
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<img width="1795" height="1039" alt="Screenshot 2026-02-10 at 11 40 47 AM" src="https://github.com/user-attachments/assets/15facf50-ee02-4686-a953-62f40c7004a1" />
+<br/>
+## 📺 Demo
+Feel free to take a look a the demo!: 👉 https://sticky-grid.vercel.app
