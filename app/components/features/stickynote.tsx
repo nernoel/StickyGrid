@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
+import ReactMarkdown from "react-markdown";
 import { createClient } from '@/app/lib/supabase/client'; // Assuming you have imported supabase correctly
 
 interface StickyNoteProps {
@@ -67,20 +68,24 @@ const StickyNote: React.FC<StickyNoteProps> = ({ id, title, content, color, onUp
                 </div>
             </div>
             <div className="mt-10">
-                <h3 className="text-lg text-gray-100 font-semibold">{title}</h3>
-                <p className="mt-2 text-gray-100">{content}</p>
+                <h3 className="text-lg text-black-500 font-semibold">{title}</h3>
+                <div className="mt-2 text-gray-900 prose prose-invert">
+                    <ReactMarkdown>
+                        {content}
+                    </ReactMarkdown>
+                </div>
             </div>
             {isEditing && (
                 <div className=" fixed inset-0 z-50 overflow-auto bg-gray-500 bg-opacity-50 flex justify-center items-center">
-                    <div className="bg-gray-800 p-8 rounded-xl max-w-md">
-                        <input type="text" value={editedTitle} onChange={(e) => setEditedTitle(e.target.value)} className="block w-full mb-4 border border-gray-300 rounded px-2 py-1" />
-                        <textarea value={editedContent} onChange={(e) => setEditedContent(e.target.value)} className="block w-full mb-4 border border-gray-300 rounded px-2 py-1"></textarea>
+                    <div className="bg-gray-200 p-8 rounded-xl max-w-md">
+                        <input type="text" value={editedTitle} onChange={(e) => setEditedTitle(e.target.value)} className="block w-full mb-4 border border-black-100 rounded px-2 py-1" />
+                        <textarea value={editedContent} onChange={(e) => setEditedContent(e.target.value)} className="block w-full mb-4 border border-black-100 rounded px-2 py-1"></textarea>
                         <div className="flex mt-2 mb-2 gap-1">
-                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-yellow-500 rounded-full ${editedColor === 0 ? 'bg-yellow-500' : ''}`} onClick={() => setEditedColor(0)}></button>
-                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-blue-500 rounded-full ${editedColor === 1 ? 'bg-blue-500' : ''}`} onClick={() => setEditedColor(1)}></button>
-                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-green-500 rounded-full ${editedColor === 2 ? 'bg-green-500' : ''}`} onClick={() => setEditedColor(2)}></button>
-                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-red-500 rounded-full ${editedColor === 3 ? 'bg-red-500' : ''}`} onClick={() => setEditedColor(3)}></button>
-                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-gray-500 rounded-full ${editedColor === 4 ? 'bg-gray-500' : ''}`} onClick={() => setEditedColor(4)}></button>
+                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-yellow-200 rounded-full ${editedColor === 0 ? 'bg-yellow-200' : ''}`} onClick={() => setEditedColor(0)}></button>
+                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-blue-200 rounded-full ${editedColor === 1 ? 'bg-blue-200' : ''}`} onClick={() => setEditedColor(1)}></button>
+                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-green-200 rounded-full ${editedColor === 2 ? 'bg-green-200' : ''}`} onClick={() => setEditedColor(2)}></button>
+                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-red-200 rounded-full ${editedColor === 3 ? 'bg-red-200' : ''}`} onClick={() => setEditedColor(3)}></button>
+                            <button className={`h-4 w-4 rounded-full cursor-pointer flex w-3 h-3 me-3 bg-gray-200 rounded-full ${editedColor === 4 ? 'bg-gray-200' : ''}`} onClick={() => setEditedColor(4)}></button>
                         </div>
                         <button onClick={handleSaveEdit} className="bg-blue-500 text-white rounded px-4 py-2">Save</button>
                     </div>
@@ -93,15 +98,15 @@ const StickyNote: React.FC<StickyNoteProps> = ({ id, title, content, color, onUp
 const getColorName = (color: number) => {
     switch (color) {
         case 0:
-            return 'yellow-500';
+            return 'yellow-200';
         case 1:
-            return 'blue-500';
+            return 'blue-200';
         case 2:
-            return 'green-500';
+            return 'green-200';
         case 3:
-            return 'red-500';
+            return 'red-200';
         default:
-            return 'gray-500';
+            return 'gray-200';
     }
 };
 

@@ -26,7 +26,7 @@ export default function AuthButton() {
   const handleSignOut = async () => {
     try {
       await supabase.auth.signOut();
-      router.push("/pages/login");
+      router.push("/login");
     } catch (error) {
       console.error("Sign out error:", error);
     }
@@ -36,7 +36,7 @@ export default function AuthButton() {
     <div className="flex items-center gap-4">
       {user.email}
       <button
-        className="flex rounded-md no-underline py-2 px-3 bg-gray-800 bg-btn-background hover:bg-gray-900"
+        className="flex rounded-md no-underline py-2 px-3 bg-gray-500 bg-btn-background hover:bg-gray-900 hover:text-white"
         onClick={handleSignOut}
       >
         Logout

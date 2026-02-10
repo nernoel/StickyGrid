@@ -54,8 +54,8 @@ export default async function Login({
     });
 
     if (error) {
-
-    return redirect(`/login?message=${'could not authenticate user'}`); // This will show the actual error to user
+      console.log(error)
+    return redirect(`/login?message=${error}`);
   }
 
     return redirect("/login?message=Check email to continue sign in process");
