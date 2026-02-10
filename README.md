@@ -9,7 +9,7 @@ Sticky grid is a productivity application for storing digital sticky notes in an
 <br/>
 ## 📺 Demo
 
-Feel free to take a look a the demo!: 👉 https://sticky-grid.vercel.app
-To login: use the following test user details:
-email: testuser1234@gmail.com
-password: 1234
+- Feel free to take a look a the demo!: 👉 https://sticky-grid.vercel.app
+- To login: use the following test user details:
+- email: testuser1234@gmail.com
+- password: 1234
