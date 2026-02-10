@@ -37,7 +37,7 @@ export default async function Login({
   const signUp = async (formData: FormData) => {
     "use server";
 
-    const origin = "http://localhost:3000"
+    const origin = "https://sticky-grid.vercel.app"
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
     const supabase = await createClient();
